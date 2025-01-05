@@ -76,9 +76,10 @@ const Header = (props) => {
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
                             color="inherit"
+                            style={{ paddingRight: 0 }}
                         >
-                        <MenuIcon />
-                            </IconButton>
+                            <MenuIcon />
+                        </IconButton>
                         <Menu
                             id="menu-appbar"
                             anchorEl={anchorElNav}

@@ -11,7 +11,7 @@ const Slider = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prevSlide) => (prevSlide + 1) % slider_data.length);
-        }, 10000);
+        }, 7000);
 
         return () => clearInterval(interval);
     }, []);
