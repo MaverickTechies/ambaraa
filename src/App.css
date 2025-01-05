@@ -4,24 +4,22 @@ body {
   font-family: "Arial", sans-serif;
   background-color: #f5f5f5;
 }
+
 img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* General Colors */
 :root {
   --theme-gradient: linear-gradient(to right, #8ab19d, #ffffff);
   --theme-text-color: #2c3e50;
 }
 
-/* AppBar */
 .MuiAppBar-root {
   background: var(--theme-gradient) !important;
   color: var(--theme-text-color) !important;
 }
 
-/* Header Buttons */
 .MuiButton-root {
   color: var(--theme-text-color) !important;
 }

@@ -59,7 +59,6 @@ const App = () => {
           ))}
         </Container>
 
-        {/* Footer */}
         <Box component="footer" className="footer">
           <Typography variant="body1">Contact: Ambaraa (XXXXXXXXXX)</Typography>
         </Box>
