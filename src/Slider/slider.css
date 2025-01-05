@@ -1,0 +1,21 @@
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+.slider-dot {
+width: 12px;
+height: 12px;
+margin: 0 5px;
+border: 2px solid #69836E;
+border-radius: 50%;
+background-color: transparent;
+transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.slider-dot .active {
+background-color: #69836E;
+border-color: #69836E;
+}
+  
