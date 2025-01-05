@@ -1,21 +1,65 @@
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-.slider-dot {
-width: 12px;
-height: 12px;
-margin: 0 5px;
-border: 2px solid #69836E;
-border-radius: 50%;
-background-color: transparent;
-transition: background-color 0.3s ease, border-color 0.3s ease;
+/* Existing slider dot styles */
+.slider-container {
+  position: relative;
+  text-align: center;
 }
 
-.slider-dot .active {
-background-color: #69836E;
-border-color: #69836E;
+.slider-image {
+  width: 100%;
+  max-height: 500px;
+  object-position: center;
+  transition: opacity 1s ease-in-out;
+  display: block;
 }
-  
+
+.slider-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #888888;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.active {
+  background-color: #888888;
+}
+
+.slider-button {
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.slider-button:hover {
+  color: #f0f0f0;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}

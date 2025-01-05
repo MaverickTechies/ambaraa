@@ -12,6 +12,7 @@ import {
     MenuItem
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import './header.css';
 
 const Header = (props) => {
     const { sections } = props;
@@ -54,24 +55,20 @@ const Header = (props) => {
     };
 
     return (
-        <AppBar ref={headerRef} position="fixed">
+        <AppBar ref={headerRef} className="header">
             <Container maxWidth="xl">
-                <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-                    <Box sx={{ flexGrow: 0 , display: "flex" ,flexDirection:'row',alignItems:'center',gap: "10px"}}>
+                <Toolbar disableGutters className="toolbar">
+                    <Box className="logo-container">
                         <Avatar alt="Ambaraa Logo" src="/images/logo.jpg" />
                         <Typography
                             variant="h6"
                             noWrap
-                            sx={{
-                                mr: 2,
-                                fontWeight: 400,
-                                letterSpacing: '.1rem'
-                            }}
+                            className="logo-text"
                         >
                             AMBARAA
                         </Typography>
                     </Box>
-                    <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
+                    <Box className="menu-button" sx={{ display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -96,21 +93,22 @@ const Header = (props) => {
                             }}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
+                            className="menu-appbar"
                             sx={{ display: { xs: 'block', md: 'none' } }}
                         >
                             {sections.map((section) => (
-                                <MenuItem key={section.title} onClick={() => scrollToSection(section.id)}>
-                                <Typography sx={{ textAlign: 'center' }}>{section.title}</Typography>
+                                <MenuItem key={section.title} onClick={() => scrollToSection(section.id)} className="menu-item">
+                                <Typography>{section.title}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
-                    <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+                    <Box className="desktop-menu" sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {sections.map((section) => (
                             <Button
                                 key={section.id}
                                 onClick={() => scrollToSection(section.id)}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                className="nav-button"
                             >
                                 {section.title}
                             </Button>

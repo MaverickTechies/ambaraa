@@ -3,51 +3,37 @@ import { Typography, Button, Box } from "@mui/material";
 import { slider_data } from "../data/data";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import "./slider.css";
 
 const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % slider_data.length);
-      }, 10000);
-  
-      return () => clearInterval(interval);
+        const interval = setInterval(() => {
+            setCurrentSlide((prevSlide) => (prevSlide + 1) % slider_data.length);
+        }, 10000);
+
+        return () => clearInterval(interval);
     }, []);
-  
+
     const nextSlide = () => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slider_data.length);
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % slider_data.length);
     };
-  
+
     const prevSlide = () => {
-      setCurrentSlide(
-        (prevSlide) => (prevSlide - 1 + slider_data.length) % slider_data.length
-      );
+        setCurrentSlide(
+            (prevSlide) => (prevSlide - 1 + slider_data.length) % slider_data.length
+        );
     };
 
     return (
-        <Box sx={{ position: "relative", textAlign: "center" }}>
+        <Box className="slider-container">
             <img
                 src={slider_data[currentSlide].img}
                 alt={slider_data[currentSlide].title}
-                style={{
-                    width: "100%",
-                    maxHeight: "500px",
-                    objectPosition: "center",
-                    transition: "opacity 1s ease-in-out",
-                    display: "block"
-                }}
+                className="slider-image"
             />
-            <Box
-            sx={{
-                position: "absolute",
-                top: "45%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                color: "white",
-                textShadow: "2px 2px 5px rgba(0,0,0,0.7)",
-            }}
-            >
+            <Box className="slider-text">
                 {slider_data[currentSlide].title &&
                     <Typography variant="h4" fontWeight="bold">
                         {slider_data[currentSlide].title}
@@ -60,69 +46,24 @@ const Slider = () => {
                 }
             </Box>
             
-            <Box
-                sx={{
-                    position: "absolute",
-                    bottom: "20px",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    display: "flex",
-                    gap: "8px",
-                }}
-            >
+            <Box className="slider-dots">
                 {slider_data.map((_, index) => (
-                <Box
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    sx={{
-                    width: "12px",
-                    height: "12px",
-                    borderRadius: "50%",
-                    border: "2px solid",
-                    borderColor: "#888888",
-                    backgroundColor: index === currentSlide ? "#888888" : "transparent",
-                    cursor: "pointer",
-                    transition: "background-color 0.3s ease-in-out, border-color 0.3s ease-in-out",
-                    }}
-                />
+                    <Box
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        className={`slider-dot ${index === currentSlide ? "active" : ""}`}
+                    />
                 ))}
-
             </Box>
 
-            <Button
-                onClick={prevSlide}
-                sx={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "10px",
-                    transform: "translateY(-50%)",
-                    color: "white",
-                    "&:hover": { color: "#f0f0f0" },
-                    padding: "10px",
-                    backgroundColor: "transparent",
-                }}
-            >
+            <Button onClick={prevSlide} className="slider-button prev">
                 <ArrowBackIosIcon />
             </Button>
-            <Button
-                onClick={nextSlide}
-                sx={{
-                    position: "absolute",
-                    top: "50%",
-                    right: "10px",
-                    transform: "translateY(-50%)",
-                    color: "white",
-                    "&:hover": { color: "#f0f0f0" },
-                    padding: "10px",
-                    backgroundColor: "transparent"
-                }}
-            >
-                <ArrowForwardIosIcon size={17} />
+            <Button onClick={nextSlide} className="slider-button next">
+                <ArrowForwardIosIcon />
             </Button>
-
         </Box>
-
-    )
+    );
 }
 
-export default Slider
+export default Slider;
