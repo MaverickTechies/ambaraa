@@ -29,10 +29,8 @@ const Header = (props) => {
           }
         };
     
-        // Set initial height
         updateHeaderHeight();
     
-        // Listen for resize events
         const resizeObserver = new ResizeObserver(() => updateHeaderHeight());
         resizeObserver.observe(headerRef.current);
     
