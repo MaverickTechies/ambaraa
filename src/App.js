@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Container, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import { sections } from "./data/data";
 import "./App.css";
 import Header from "./Header/header";
