@@ -1,0 +1,57 @@
+.container {
+    padding: 20px;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.section-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.custom-bullet-points {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-bullet-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.bullet-icon {
+    color: #6A8D73;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-text {
+        padding: 10px;
+    }
+
+    .section-image img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .custom-bullet-item {
+        justify-content: center;
+    }
+}

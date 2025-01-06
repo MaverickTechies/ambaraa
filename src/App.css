@@ -28,35 +28,6 @@ img {
   background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
-.section-container {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.left-aligned {
-  background: linear-gradient(90deg, #8ab19d 50%, #ffffff 50%);
-}
-
-.right-aligned {
-  background: linear-gradient(90deg, #ffffff 50%, #8ab19d 50%);
-}
-
-.section-text {
-  flex: 1;
-  padding: 20px;
-  color: #2c3e50;
-}
-
-.section-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
 /* Footer */
 footer {
   background: var(--theme-gradient);
