@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Typography, Button, Box } from "@mui/material";
-import { slider_data } from "../data/data";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import "./slider.css";
 
-const Slider = () => {
+const Slider = (props) => {
+    const { slider_data } = props;
     const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {

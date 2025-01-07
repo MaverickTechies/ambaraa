@@ -16,6 +16,12 @@ export const sections = [
     title: "What We Offer?",
     img: "/images/slider-image-3.jpg",
     description: "Our offerings are designed to address a wide range of health concerns. We help restore hormonal balance, relieve pain, and support mental health by managing stress, anxiety, and depression.\nOur treatments also target BP & diabetes, promote better sleep for those suffering from insomnia, assist with weight management, and provide effective infertility treatment to support overall well-being and a healthier lifestyle."
+  },
+  {
+    id: "yoga",
+    title: "Yoga",
+    slider: true,
+    description: "Explore various yoga practices tailored for every need.\nDetox Yoga helps refresh your body and mind, paired with a healthy post-workout meal, while the Detox Getaway offers a serene escape from daily chaos to reconnect with family and indulge in wholesome food.\nSenior Citizen Yoga improves mental sharpness, joint health, and stamina, benefiting those with diabetes or hypertension.\nKids Yoga nurtures emotional strength and mindfulness through fun activities.\nMind Yoga promotes relaxation, reduces stress, and enhances self-awareness.\nRoutine Yoga revitalizes the body by channeling energy and purifying chakras.\nTherapy Yoga focuses on holistic healing through mindfulness and breathing.\nPrenatal and Postnatal Yoga provide support during and after pregnancy, balancing emotional and physical well-being."
   }
 ];
 
@@ -33,5 +39,24 @@ export const slider_data = [
     img: "/images/slider-image-3.jpg",
     title: "Join Us at AYURYOGA",
     description:"Therapeutic yoga and Abhyangam (oil massage) for health and wellness."
+  }
+];
+
+export const yoga_slider = [
+  {
+    id: "id_1",
+    img: "/images/yoga-slider-1.jpeg"
+  },
+  {
+    id: "id_2",
+    img: "/images/yoga-slider-2.jpeg"
+  },
+  {
+    id: "id_3",
+    img: "/images/yoga-slider-3.jpeg"
+  },
+  {
+    id: "id_4",
+    img: "/images/yoga-slider-4.jpeg"
   }
 ];

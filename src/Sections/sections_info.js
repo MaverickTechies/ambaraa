@@ -1,10 +1,10 @@
 import React from 'react'
 import { Typography, Container, Box } from "@mui/material";
-import { CheckCircleOutline } from '@mui/icons-material'
 import './sections_info.css'
+import Slider from '../Slider/slider';
 
 const SectionsInfo = (props) => {
-    const { sections } = props;
+    const { sections, slider_data } = props;
     return (
         <Container className="container">
             {sections.map((section, index) => (
@@ -22,19 +22,10 @@ const SectionsInfo = (props) => {
                             ))}
                         </Typography>
 
-                        {section.points && (
-                            <ul className="custom-bullet-points">
-                                {section.points.map((point, i) => (
-                                    <li key={i} className="custom-bullet-item">
-                                        <CheckCircleOutline className="bullet-icon" /> {point}
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
                     </Box>
-
+                    
                     <Box className="section-image">
-                        <img src={section.img} alt={section.title} />
+                        {section.slider ? <Slider slider_data={slider_data} /> : <img src={section.img} alt={section.title} />}
                     </Box>
                 </Box>
             ))}

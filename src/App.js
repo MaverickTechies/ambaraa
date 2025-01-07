@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
-import { sections } from "./data/data";
+import { sections, yoga_slider, slider_data } from "./data/data";
 import "./App.css";
 import Header from "./Header/header";
 import Slider from "./Slider/slider";
@@ -15,8 +15,8 @@ const App = () => {
 
       <Box sx={{ marginTop: 'var(--header-height)' }}>
 
-        <Slider/>
-        <SectionsInfo sections={sections}/>
+        <Slider slider_data={slider_data}/>
+        <SectionsInfo sections={sections} slider_data={yoga_slider}/>
 
         <Box component="footer" className="footer">
           <Typography variant="body1">Contact: Ambaraa (XXXXXXXXXX)</Typography>
