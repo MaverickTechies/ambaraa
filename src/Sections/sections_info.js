@@ -36,17 +36,17 @@ const SectionsInfo = (props) => {
                                 variant="body1"
                                 className="section-description"
                             >
-                                {section.description.split('\n').map((line, i) => (
-                                    <React.Fragment key={i}>
-                                        <Box display="flex" alignItems="center" gap={1}>
-                                            <span role="img" aria-label="bullet-point">
-                                                🔹
-                                            </span>
-                                            {line}
-                                        </Box>
-                                        {i !== section.description.split('\n').length - 1 && <br />}
-                                    </React.Fragment>
-                                ))}
+                            {section.description.split('\n').map((line, i) => (
+                                <React.Fragment key={i}>
+                                    <Box className="bullet-point">
+                                        <span role="img" aria-label="bullet-point">
+                                            🔹
+                                        </span>
+                                        {line}
+                                    </Box>
+                                    {i !== section.description.split('\n').length - 1 && <br />}
+                                </React.Fragment>
+                            ))}
                             </Typography>
                         </Box>
                     </Box>
