@@ -34,16 +34,17 @@ const Slider = (props) => {
                 className="slider-image"
             />
             <Box className="slider-text">
-                {slider_data[currentSlide].title &&
-                    <Typography variant="h4" fontWeight="bold">
-                        {slider_data[currentSlide].title}
-                    </Typography>
-                }
-                {slider_data[currentSlide].description &&
-                    <Typography variant="h6" mt={1} fontWeight="bold">
-                        {slider_data[currentSlide].description}
-                    </Typography>
-                }
+            {slider_data[currentSlide].title && (
+                <Typography variant="h4" fontWeight="bold" className="slider-title">
+                    {slider_data[currentSlide].title}
+                </Typography>
+            )}
+
+            {slider_data[currentSlide].description && (
+                <Typography variant="h6" mt={1} fontWeight="bold" className="slider-description">
+                    {slider_data[currentSlide].description}
+                </Typography>
+            )}
             </Box>
             
             <Box className="slider-dots">
