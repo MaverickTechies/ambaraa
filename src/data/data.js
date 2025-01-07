@@ -21,7 +21,7 @@ export const sections = [
     id: "yoga",
     title: "Yoga",
     slider: true,
-    description: "Explore various yoga practices tailored for every need.\nDetox Yoga helps refresh your body and mind, paired with a healthy post-workout meal, while the Detox Getaway offers a serene escape from daily chaos to reconnect with family and indulge in wholesome food.\nSenior Citizen Yoga improves mental sharpness, joint health, and stamina, benefiting those with diabetes or hypertension.\nKids Yoga nurtures emotional strength and mindfulness through fun activities.\nMind Yoga promotes relaxation, reduces stress, and enhances self-awareness.\nRoutine Yoga revitalizes the body by channeling energy and purifying chakras.\nTherapy Yoga focuses on holistic healing through mindfulness and breathing.\nPrenatal and Postnatal Yoga provide support during and after pregnancy, balancing emotional and physical well-being."
+    description: "Detox Yoga helps refresh your body and mind, paired with a healthy post-workout meal, while the Detox Getaway offers a serene escape from daily chaos to reconnect with family and indulge in wholesome food.\nSenior Citizen Yoga improves mental sharpness, joint health, and stamina, benefiting those with diabetes or hypertension.\nKids Yoga nurtures emotional strength and mindfulness through fun activities.\nMind Yoga promotes relaxation, reduces stress, and enhances self-awareness.\nRoutine Yoga revitalizes the body by channeling energy and purifying chakras.\nTherapy Yoga focuses on holistic healing through mindfulness and breathing.\nPrenatal and Postnatal Yoga provide support during and after pregnancy, balancing emotional and physical well-being."
   }
 ];
 

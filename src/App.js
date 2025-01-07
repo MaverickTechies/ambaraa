@@ -14,15 +14,14 @@ const App = () => {
       <Header sections={sections}/>
 
       <Box sx={{ marginTop: 'var(--header-height)' }}>
-
         <Slider slider_data={slider_data}/>
         <SectionsInfo sections={sections} slider_data={yoga_slider}/>
-
-        <Box component="footer" className="footer">
-          <Typography variant="body1">Contact: Ambaraa (XXXXXXXXXX)</Typography>
-        </Box>
-
       </Box>
+
+      <Box component="footer" className="footer">
+        <Typography variant="body1">Contact: Ambaraa (XXXXXXXXXX)</Typography>
+      </Box>
+
     </Box>
   );
 };

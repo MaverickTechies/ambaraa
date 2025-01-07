@@ -14,7 +14,7 @@ const Slider = (props) => {
         }, 7000);
 
         return () => clearInterval(interval);
-    }, []);
+    }); 
 
     const nextSlide = () => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slider_data.length);
