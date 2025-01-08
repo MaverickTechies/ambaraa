@@ -19,8 +19,29 @@ const App = () => {
       </Box>
 
       <Box component="footer" className="footer">
-        <Typography variant="body1">Contact: Ambaraa (XXXXXXXXXX)</Typography>
+          <Typography variant="body1">
+              Contact: Ambaraa (XXXXXXXXXX)
+          </Typography>
+          <Typography variant="body1" className="footer-email">
+              Email: <a href="mailto:xxx@gmail.com">xxx@gmail.com</a>
+          </Typography>
+          <Box className="footer-social">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-twitter"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-instagram"></i>
+              </a>
+          </Box>
+          <Typography variant="body2" className="footer-copy">
+              © 2025 Ambaraa Yoga. All rights reserved.
+          </Typography>
       </Box>
+
+
 
     </Box>
   );

@@ -33,6 +33,7 @@ const SectionsInfo = (props) => {
 
                         <Box className="section-text">
                             <Typography
+                                component="div"
                                 variant="body1"
                                 className="section-description"
                             >
