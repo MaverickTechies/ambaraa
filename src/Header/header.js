@@ -76,6 +76,7 @@ const Header = (props) => {
                         </IconButton>
                         <Menu
                             id="menu-appbar"
+                            disableScrollLock={true}
                             anchorEl={anchorElNav}
                             anchorOrigin={{
                                 vertical: 'bottom',
