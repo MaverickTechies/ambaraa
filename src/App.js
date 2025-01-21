@@ -20,10 +20,10 @@ const App = () => {
 
       <Box component="footer" className="footer">
           <Typography variant="body1">
-              Contact: Ambaraa (XXXXXXXXXX)
+              Contact: Ambaraa (+91 - 9483054289)
           </Typography>
           <Typography variant="body1" className="footer-email">
-              Email: <a href="mailto:xxx@gmail.com">xxx@gmail.com</a>
+              Email: <a href="mailto:ambaraayogaayurveda@gmail.com">ambaraayogaayurveda@gmail.com</a>
           </Typography>
           <Box className="footer-social">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
